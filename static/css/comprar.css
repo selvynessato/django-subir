@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.container-formu-img{
+    margin-left: 2.5%;
+}
+
+.container-formu-img img{
+    width: 17%;
+}
+
+
+.container-formu {
+    display: flex;
+}
+
+.column-left {
+    width: 70%;
+}
+
+.column-right {
+    width: 30%;
+}
+
+.container-formu-img {
+    text-align: left;
+}
+
+.container-formu-img h2 {
+    font-size: 24px;
+}
+
+.column-left,
+.column-right {
+    text-align: center;
+}
+
+.column-left input,
+.column-right input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.column-left button.btn,
+.column-right button.btn {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}

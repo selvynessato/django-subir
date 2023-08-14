@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{%load static%}
+
+{%block title%}Tienda{%endblock%}
+
+{%block content%}
+
+<ul>
+    {% for pais in paises %}
+		<li>{{pais.id_pais}} - {{pais.nombre_pais}}</li>
+	{% endfor %}
+</ul>
+
+<select name="selectcountries" id="selectcountries" style="width: 300px; border-radius: 20px; text-align: center;" >
+	<option val=""> ------Seleccione una opcion------ </option>
+	{% for pais in paises %}
+		<option val="{{pais.id_pais}}"> {{pais.nombre_pais}} </option>    
+	{% endfor %}
+</select>  
+
+<h1>TIENDA</h1>
+{%endblock%}

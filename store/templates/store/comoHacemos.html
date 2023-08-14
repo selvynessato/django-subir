@@ -1,0 +1,22 @@
+{% extends 'store/layout.html' %}
+{%load static%}
+{%block title%} Nuestro Cafe {%endblock%}
+{%block content%}
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for Imagen in Imagens %}
+            <div class="col">
+                    
+                    <div class="card-body">
+                        <h4 class="card-text" style="text-align: left;"><strong>{{ Imagen.titulo }}</strong></h4>
+                        <p class="card-text" style="color: rgb(255, 153, 0); text-align: left;"><strong>Descripcion: {{ Imagen.titulo }}</strong></p>               
+                        <h4 class="card-text" style="text-align: right;"><strong>{{ Producto.precio_producto }}</strong></h4>
+                    </div>
+
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{%endblock%}

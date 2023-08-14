@@ -1,0 +1,45 @@
+.container-formu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+  
+.container-formu .column {
+    width: 40%;
+    text-align: center;
+}
+  
+.container-formu  .column h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+.container-formu .column h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+.container-formu .column a {
+    color: blue;
+  }
+  
+.container-formu .column input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  
+.container-formu .column p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+.container-formu .column button.btn {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  

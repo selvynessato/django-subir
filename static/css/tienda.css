@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+/*imagen principal*/
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive .embed-responsive-items {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.embed-responsive-21by9 {
+      padding: 29%; /* Calculado como 9 dividido por 21, multiplicado por 100 */
+}
+
+.titulos1 h1{
+  text-align: center;
+  padding: 50px;
+}
+
+.container-segundo {
+  margin-left: 150px;
+  margin-right: 150px;
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container-segundo .card {
+  width: 33.33%;
+  text-align: center;
+}
+
+.container-segundo .card img {
+  width: 100%;
+  height: 200px;
+}
+
+.container-segundo .comprar-btn {
+  margin-top: 10px;
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.container-segundo .comprar-btn:hover {
+  background-color: #ff000060;
+  color: black;
+}
+
+.container-segundo select {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+

@@ -1,0 +1,56 @@
+{% extends 'store/layout.html' %}
+{%load static%}
+
+{%block title%}Tienda{%endblock%}
+
+{%block content%}
+<div class="embed-responsive embed-responsive-21by9">
+  <video class="embed-responsive-items" src="{% static 'video/portada.mp4'%}" autoplay loop muted></video>
+</div>
+
+<div class="container" style="padding: 20px;">
+    <h1>Productos</h1>
+</div>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for product in products %}
+        <div class="col">
+            <div class="card" style="border: 0px solid;">
+                <img class="thumbnail" src="{{product.imageURL}}">
+                <div class="card-body" style="margin-bottom:50px">
+                    <h4 class="card-text" style="text-align: left; font-size: 20px"><strong>{{ product.name }}</strong></h4>
+                    <p class="card-text" style="color: rgb(255, 153, 0); text-align: left;"><strong>Descripcion: {{ Producto.descripcion_producto }}</strong></p>
+                    <h4 class="card-text" style="text-align: right;"><strong>Q {{ product.price|floatformat:2 }}</strong></h4>
+                </div>
+                <div class="d-grid gap-2">
+                    <button data-product={{product.id}} data-action="add" class="btn btn-outline-danger add-btn update-cart">Comprar</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+<div class="container-fluid">
+	<div class="row align-items-start">
+	  <div class="col-md-6 col-12">
+		<div class="col-md-4 offset-md-4"></div>
+		<img src="{% static 'image/entrega01.jpg'%}" alt="Imagen">
+	  </div>
+	  <div class="col-md-6 col-12">
+		<strong>
+		  <h1 style="padding-right: 15%; padding-left: 15%;">Cafe hasta la puerta de tu casa</h1>
+		</strong>
+		<p style="padding-right: 15%; padding-left: 15%;">Descubre una experiencia única con nuestro café orgánico producido por mujeres productoras. LLevamos tu café desde las montañas hasta tu casa, brindadote una experiencia única y deliciosa.
+        </p> 
+	  </div>
+	</div>
+</div>
+
+<div class="spacer"></div>
+
+
+{%endblock%}
