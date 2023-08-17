@@ -29,6 +29,11 @@
   float: left;
 }
 
+.subrayado-amarillo {
+  background-color: yellow; /* Color de fondo amarillo */
+  padding: 2px 4px; /* Ajusta el espaciado interior del span */
+}
+
 
 /*card*/
 
@@ -90,17 +95,16 @@ img {
 }
 
 .carrito {
-width: 20px;
-height: 20px;
-background-color: black;
-margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  margin-right: 10px;
 }
 
 .dropdown-container {
-display: flex;
-justify-content: space-between;
-padding: 10px;
-
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .dropdown {
@@ -140,8 +144,8 @@ width: 100%;
     align-items: center;
     background-color: white;
     width: 50%;
-    color: red;
-    border: 2px solid red;
+    color: #EF7A24;
+    border: 2px solid #EF7A24;
     border-radius: 5px;
     font-size: 16px;
     padding: 10px 20px;
@@ -166,7 +170,7 @@ width: 100%;
 }
 
 .red-button:hover {
-    background-color: red;
+    background-color: #EF7A24;
     color: white;
 }
 

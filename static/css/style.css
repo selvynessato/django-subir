@@ -24,6 +24,7 @@ nav {
 	padding: 30px;
 }
 
+
 .logo img {
 	width: 100px;
   margin-left: 50px;
@@ -43,6 +44,7 @@ nav {
   color: #000000;
   text-decoration: none;
 }
+
 
 .acciones{
   margin-right: 50px;
@@ -92,8 +94,8 @@ footer {
 
 footer img {
   font-size: 24px;
-  width: 63px;
-  height: 63px;
+  width: 30px;
+  height: 30px;
   margin: 0 10px;
 }
 
