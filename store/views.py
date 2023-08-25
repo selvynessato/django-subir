@@ -110,13 +110,17 @@ def evento(request):
 
     return render(request, 'store/evento.html')
 
+
 def como_hacemos(request):
 
-	imagens = Imagen.objects.all()
+	data = cartData(request)
 
-	return render(request, "store/comoHacemos.html",{
-		'imagens': imagens
-	})
+	cartItems =data['cartItems']
+	order = data['order']
+	items = data['items']
+
+	context ={'items':items, 'order':order, 'cartItems':cartItems}
+	return render(request, 'store/comoHacemos.html', context)
 
 def aprende(request):
     return render(request,"store/aprender.html")
