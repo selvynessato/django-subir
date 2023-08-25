@@ -18,11 +18,11 @@
         padding-left: 20px; /* Ajusta el espacio a la izquierda */
     }
     .tituloc{
-        margin-left: -800px; 
+        margin-left: -700px; 
         font-size: 70px;
     }
     .subtituc{
-        margin-left: -800px; 
+        margin-left: -700px; 
         font-size: 40px;
     }
     .subtituc span{
@@ -46,21 +46,21 @@
         <img src="{% static 'image/carrusel01.jpg'%}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h1 class="tituloc"><strong>BUEN CAFE</strong></h1>
-          <ps class="subtituc"><strong><span>Excelencia de Guatemala.</span></strong></p>
+          <ps class="subtituc"><strong><span>Excelencia de Guatemala</span></strong></p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="{% static 'image/carrusel02.jpg'%}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h1 class="tituloc"><strong>EXCELENCIA.</strong></h1>
-          <ps class="subtituc"><strong><span>desde una mezcla de aromas.</span></strong></p>
+          <h1 class="tituloc"><strong>EXCELENCIA</strong></h1>
+          <ps class="subtituc"><strong><span>desde una mezcla de aromas</span></strong></p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="{% static 'image/carrusel03.jpg'%}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h1 class="tituloc"><strong>COMERCIO JUSTO.</strong></h1>
-          <ps class="subtituc"><strong><span>Cafe 100% organico.</span></strong></p>
+          <h1 class="tituloc"><strong>COMERCIO JUSTO</strong></h1>
+          <ps class="subtituc"><strong><span>Cafe 100% organico</span></strong></p>
         </div>
       </div>
 
@@ -68,7 +68,7 @@
         <img src="{% static 'image/carrusel04.jpg'%}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h1 class="tituloc"><strong>TERESA</strong></h1>
-          <ps class="subtituc"><strong><span>buen cafe de las montañas.</span></strong></p>
+          <ps class="subtituc"><strong><span>buen cafe de las montañas</span></strong></p>
         </div>
       </div>
 
@@ -231,8 +231,18 @@
     </div>
 </div>
 
-<div class="spacer"></div>
+<div class="container" style="padding: 20px;">
+    <h1>Eventos</h1>
+</div>
 
-
+<div class="owl-carousel owl-theme">
+    <div class="item"><img src="{% static 'image/evento01.jpg'%}" alt="Imagen"></div>
+    <div class="item"><img src="{% static 'image/evento02.jpg'%}" alt="Imagen"></div>
+    <div class="item"><img src="{% static 'image/evento03.jpg'%}" alt="Imagen"></div>
+    <div class="item"><img src="{% static 'image/evento04.jpg'%}" alt="Imagen"></div>
+    <div class="item"><img src="{% static 'image/evento05.jpg'%}" alt="Imagen"></div>
+    <div class="item"><img src="{% static 'image/evento06.jpg'%}" alt="Imagen"></div>
+    <div class="item"><img src="{% static 'image/evento07.jpg'%}" alt="Imagen"></div>
+</div>
  
 {% endblock %}
