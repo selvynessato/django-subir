@@ -16,7 +16,8 @@ urlpatterns = [
     path('acceso/', views.acceso, name="acceso"),
     path('registrate/', views.registrate, name="registrate"),
     path('comprar/', views.comprar, name="comprar"),
-    path('lista_paises/', views.lista_paises, name="lista_paises"),
-    path('charge/', views.charge, name="charge"),
-    path('success/<str:args>/', views.successMsg, name="success")
+    path('success/', views.success, name='success'),
+    path('terminos/', views.terminos, name='terminos'),
+    path('error/', views.error, name='error'),
+    path('pasarela_retorno/', views.pasarela_retorno, name='pasarela_retorno'),
 ]

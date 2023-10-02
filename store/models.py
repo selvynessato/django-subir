@@ -93,3 +93,63 @@ class Imagen(models.Model):
 
     def __str__(self):
         return self.titulo
+
+class Pais(models.Model):
+    id_pais = models.IntegerField(primary_key=True)
+    nombre_pais = models.CharField(max_length=150)
+
+
+class EstaDepto(models.Model):
+    id_esta_depto = models.IntegerField(primary_key=True)
+    nombre_esta_depto = models.CharField(max_length=150)
+    id_pais = models.ForeignKey(Pais, on_delete=models.CASCADE)
+
+
+class Munici(models.Model):
+    id_munici = models.IntegerField(primary_key=True)
+    nombre_munici = models.CharField(max_length=150)
+    id_esta_depto = models.ForeignKey(EstaDepto, on_delete=models.CASCADE)
+
+class Pedido(models.Model):
+    x_login = models.CharField(max_length=255)
+    x_api_key = models.CharField(max_length=255)
+    x_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    x_currency_code = models.CharField(max_length=3)
+    x_first_name = models.CharField(max_length=255)
+    x_last_name = models.CharField(max_length=255)
+    x_phone = models.CharField(max_length=20)
+    x_ship_to_address = models.TextField()
+    x_ship_to_city = models.CharField(max_length=255)
+    x_ship_to_country = models.CharField(max_length=255)
+    x_ship_to_state = models.CharField(max_length=255)
+    x_ship_to_zip = models.CharField(max_length=10)
+    x_ship_to_phone = models.CharField(max_length=20)
+    x_description = models.TextField()
+    x_url_success = models.URLField()
+    x_url_error = models.URLField()
+    x_url_cancel = models.URLField()
+    http_origin = models.URLField()
+    x_company = models.CharField(max_length=255)
+    x_address = models.TextField()
+    x_city = models.CharField(max_length=255)
+    x_country = models.CharField(max_length=255)
+    x_state = models.CharField(max_length=255)
+    x_zip = models.CharField(max_length=10)
+    x_freight = models.DecimalField(max_digits=10, decimal_places=2)
+    taxes = models.DecimalField(max_digits=10, decimal_places=2)
+    x_email = models.EmailField()
+    x_type = models.CharField(max_length=20)
+    x_method = models.CharField(max_length=20)
+    x_invoice_num = models.CharField(max_length=20)
+    custom_fields = models.JSONField()
+    x_visacuotas = models.CharField(max_length=10)
+    x_relay_url = models.URLField()
+    origen = models.CharField(max_length=255)
+    store_type = models.CharField(max_length=255)
+    x_discount = models.DecimalField(max_digits=10, decimal_places=2)
+
+    class Meta:
+        db_table = 'store_pedido'
+
+    def __str__(self):
+        return f"Pedido #{self.id}"
