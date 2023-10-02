@@ -28,9 +28,15 @@ DEBUG = True
 
 <<<<<<< HEAD
 #ALLOWED_HOSTS = ['82.180.139.30']
-ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['*']
 =======
-ALLOWED_HOSTS = ['62.72.26.241']
+ALLOWED_HOSTS = [
+    'gtcafeteresa.com',                  
+    'www.gtcafeteresa.com',              
+    'gtcafeteresa.com:443',              
+    'www.gtcafeteresa.com:443',          
+    '62.72.26.241'
+]
 #ALLOWED_HOSTS = ['*']
 >>>>>>> c35742ffabeef3909eae53e2230ce7e22cca8136
 
