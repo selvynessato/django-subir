@@ -3,6 +3,74 @@
 {%block title%} Pago {%endblock%}
 
 {% block content %}
+<<<<<<< HEAD
+=======
+<!--
+     <div class="row">
+		<div class="col-lg-6">
+			<div class="box-element" id="form-wrapper">
+				<form action="{% url 'charge' %}" method="post" id="payment-form">
+					{% csrf_token %}
+
+					<select required name="amount" id="amount">
+						<option select value="5">$ 5 Donacion </option>
+						<option select value="10">$ 10 Donacion </option>
+						<option select value="25">$ 25 Donacion </option>
+					</select>
+
+					<input required type="email" name="email" placeholder="Correo Electrónico">
+					<input required type="text" name="nombre" placeholder="Nombre">
+
+
+				    <div class="form-row">
+				        <label for="card-element">
+				            credit or debit card
+				        </label>
+				        <div id="card-element">
+				            <--- A stripe element will be inserted here. 
+				        </div>
+				        <div id="card-errors" role="alert"></div>
+				    </div>
+				    <button type="submit">Pagar</button>
+				</form>
+			</div>
+
+			<br>
+			<div class="box-element hidden" id="payment-info">
+				<small>Paypal Options</small>
+				<div id="paypal-button-container"></div>
+			</div>
+			
+		</div>
+
+		<div class="col-lg-6">
+			<div class="box-element">
+				<a  class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; Volver al Carrito</a>
+				<hr>
+				<h3>Resumen de pedido</h3>
+				<hr>
+				{% for item in items %}
+				<div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>
+					<div style="flex:2"><p>{{item.product.name}}</p></div>
+					<div style="flex:1"><p>Q {{item.product.price|floatformat:2}}</p></div>
+					<div style="flex:1"><p>x{{item.quantity}}</p></div>
+				</div>
+				{% endfor %}
+				<h5>Items:   {{order.get_cart_items}}</h5>
+				<h5>Total:   Q {{order.get_cart_total|floatformat:2}}</h5>
+			</div>
+		</div>
+	</div>
+
+
+-->
+
+<!--	<script 
+		src="https://sandbox.qpaypro.com/payment/success/visanetgt_qpay/test?x_response_status=1&x_response_code=1&x_response_reason_code=&x_response_text=Transacción+exitosa&x_trans_id=3267&x_amount=24.00&x_invoice_num=1277&x_MD5_Hash=b2158a54a0a7e01ff88bff9fe3e671a1&x_custom_fields=('')">	
+	</script>
+
+>>>>>>> c35742ffabeef3909eae53e2230ce7e22cca8136
     <script>
         function openPopup(url) {
             window.open(url, "_blank", "width=600,height=400");
