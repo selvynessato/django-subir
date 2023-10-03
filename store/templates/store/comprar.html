@@ -1,0 +1,127 @@
+{% extends 'layout.html' %}
+{%load static%}
+{%block title%} Acerca de s{%endblock%}
+
+{%block content%}
+
+
+<div class="container-formu-img" style="padding: 0;">
+    <img src="{% static 'images/tarjetas.png'%}" class="img-thumbnail" alt="...">
+</div>
+
+<div class="container-formu">  
+    <div class="column-left" style="padding: 1.2%; width: 50%;" >
+        <input type="text" placeholder="Correo Electrónico" style="width: 100%; height: 40px; margin-bottom: 20px;">
+        <div style="display: flex; flex-wrap: wrap;">
+            <div style="flex-basis: 100%; padding-right: 0px;">
+                <select name="selectcountries" id="selectcountries" style="width: 100%; height: 40px; margin-bottom: 20px;">
+                    <option value=""> ------SELECCIONE PAÍS------ </option>
+                    {% for pais in paises %}
+                        <option value="{{ pais.id_pais }}"> {{ pais.nombre_pais }} </option>    
+                    {% endfor %}
+                </select>
+            </div>           
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap;">
+            <div style="flex-basis: 50%; padding-left: 0px;">
+                <input type="text" placeholder="Nombre" style="width: 100%; height: 40px; margin-bottom: 20px;">
+            </div>
+            <div style="flex-basis: 50%; padding-right: 0px; padding-left: 5px;">
+                <input type="text" placeholder="Apellido" style="width: 100%; height: 40px; margin-bottom: 20px;">
+            </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap;">
+            <div style="flex-basis: 100%; padding-left: 0px;">
+                <input type="text" placeholder="Dirección" style="width: 100%; height: 40px; margin-bottom: 20px;">
+            </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap;">
+            <div style="flex-basis: 50%; padding-right: 0px;">
+                <select name="selectstates" id="selectstates" style="width: 100%; height: 40px; margin-bottom: 20px;">
+                    <option value=""> ------SELECCIONE ESTADO/DEPARTAMENTO------ </option>
+                    {% for EstaDepto in EstaDeptos %}
+                        <option value="{{ EstaDepto.id_esta_depto }}"> {{ EstaDepto.nombre_esta_depto }} </option>    
+                    {% endfor %}
+                </select>
+            </div>
+            <div style="flex-basis: 50%; padding-left: 5px;">
+                <select name="selectcities" id="selectcities" style="width: 100%; height: 40px; margin-bottom: 20px;">
+                    <option value=""> ------SELECCIONE CIUDAD/MUNICIPIO------ </option>
+                    {% for Munici in Municipios %}
+                        <option value="{{ Munici.id_munici }}"> {{ Munici.nombre_munici }} </option>    
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap;">
+            <div style="flex-basis: 66.66%; padding-right: 5px;">
+                <input type="text" placeholder="Teléfono" style="width: 100%; height: 40px; margin-bottom: 20px;">
+            </div>
+            <div style="flex-basis: 33.33%; padding-left: 0px;">
+                <input type="text" placeholder="Código Postal" style="width: 100%; height: 40px; margin-bottom: 20px;">
+            </div>
+        </div>
+        <div class="column-center">
+            <button class="btn" style="background: #ff0000; justify-content: center;" >Continuar con la compra</button>
+        </div> 
+    </div>
+
+<div class="column-right" style="padding-right: 1.2%; width: 50%; height: 400px;">    
+    
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">cantidad</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><img src="{% static 'image/tostado.jpg'%}" style="width: 100px; height: 25%; border: solid; border-color: #D6D6D6;" alt=""></td>
+                    <td id="producto">Cafe</td>
+                    <td id="precio">45</td>
+                    <td style="width: 25%;"><input type="number" style="border: none; text-align: center; width: 100%; "></td>
+                    <td>Q 90.00 </td>
+                </tr>
+                <hr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="2">Sub Total</th>
+                    <td colspan="3"></td>
+                    <td>Q 90.00 </td>
+                </tr>
+                <tr>
+                    <th scope="row" colspan="2">Envio</th>
+                    <td colspan="3"></td>
+                    <td>Q 45.00 </td>
+                </tr>
+                <tr>
+                    <th scope="row" colspan="2">Total a pagar</th>
+                    <td colspan="3"></td>
+                    <td>Q 135.00 </td>
+                </tr>
+                <tr>
+                    <th scope="row" colspan="2"></th>
+                    <td colspan="2"></td>
+                    <td id="btn-aumentar"></td>
+                    <td id="btn-disminuir"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<h1>Comprar</h1>
+<h3>07-06-2023</h3>
+<script src="{% static 'js/carrito.js' %}"></script>
+{%endblock%}
+
